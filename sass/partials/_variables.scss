@@ -1,0 +1,34 @@
+//colores
+$naranja: #ff7f07;
+$negro: #000000;
+$blanco: #ffffff;
+$gris: #535353;
+
+//tipografia
+$font-titulos: bangers;
+$font-sub: 'Bebas Neue';
+$font-texto: 'DM Serif Display';
+
+//mixin con parametros
+@mixin flex ($direction, $justi, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justi;
+    align-items: $align;
+}
+@mixin font ($family, $size, $weight, $style) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+}
+@mixin presentacion ($image, $height, $position, $size) {
+    background-image: $image;
+    height: $height;
+    background-position: $position;
+    background-size: $size
+}
+@mixin text ($align,$shadow){
+    text-align: $align;
+    text-shadow: $shadow;
+}

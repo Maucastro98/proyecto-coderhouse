@@ -1,0 +1,12 @@
+// comentario sass
+// nesting o anidamientos
+@use "./partials/variables";
+@use "./partials/mainGeneral";
+@use "./partials/headerFooter";
+@use "./pages/indexMain";
+@use "./pages/productosMain";
+@use "./pages/sucursalesMain";
+
+//partials de mediaQueries van ultimo
+@use "./partials/mediaQueries";
+

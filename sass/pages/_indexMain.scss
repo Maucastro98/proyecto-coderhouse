@@ -1,0 +1,31 @@
+@use "../partials/variables" as*;
+
+main {
+    .presentacion-inicio {
+        @include presentacion (url(../img/fondo.png), auto, center, cover);
+
+        .titulo {
+            color: $naranja;
+            @include text (center, 2px 5px 5px $negro);
+            @include font(bangers, 3.5rem, 400, normal);
+        }
+
+        .bajada {
+            color: $blanco;
+            @include text (center, 2px 5px 5px $negro);
+            @include font (bebas neue, 2rem, 400, normal);
+        }
+
+        section {
+            .carousel-indicators [data-bs-target] {
+                background-color: $naranja
+            }
+
+            .img-carousel {
+                max-height: 420px;
+                object-fit: contain;
+            }
+
+        }
+    }
+}

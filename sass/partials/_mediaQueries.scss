@@ -1,0 +1,63 @@
+@use "./variables" as*;
+
+@media (max-width: 480px) {
+
+    header {
+        @include flex(column,center,center);
+        
+        nav {
+            width: 90%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+
+    .presentacion-productos {
+        .contenedor-grid {
+            display: grid;
+            grid-template-areas:
+                "titulo-grid"
+                "img1"
+                "caract1"
+                "img2"
+                "caract2"
+                "img3"
+                "caract3"
+                "img4"
+                "caract4"
+                "img5"
+                "caract5"
+                "img6"
+                "caract6";
+
+            grid-template-columns: 90%;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+            margin-top: 5%;
+            margin-bottom: 5%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            .titulo-grid {
+                grid-area: titulo-grid;
+                justify-content: start;
+                justify-items: start;
+            }
+
+            @for $i from 1 through 6 {
+                .img#{$i} {
+                    grid-area: img#{$i};
+                }
+
+                .caract#{$i} {
+                    grid-area: caract#{$i};
+                }
+            }
+        }
+    }
+}

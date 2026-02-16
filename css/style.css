@@ -5,15 +5,17 @@
 #302e2e gris
 */
 
+
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
-}
+} 
 
 /*header-------------------------------------------------*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -52,7 +54,19 @@ nav a {
     font-size: 1.2rem;
 }
 
-/*main general----------------------------------------------*/
+
+
+
+/*MAIN inicio-----------------------------------------------------------------------------------------*/
+.presentacion-inicio {
+    background-image: url(../img/fondo.png);
+    height: auto;
+    background-position: center;
+    background-size: cover;
+
+
+}
+
 .titulo {
     color: #ff7f07;
     text-align: center;
@@ -61,6 +75,7 @@ nav a {
     font-weight: 400;
     font-style: normal;
     text-shadow: 2px 5px 5px #000000;
+
 }
 
 .bajada {
@@ -73,28 +88,12 @@ nav a {
     text-shadow: 2px 5px 5px #000000;
 }
 
-
-
-
-
-
-
-
-/*MAIN inicio-----------------------------------------------------------------------------------------*/
-.presentacion-inicio {
-    background-image: url(../img/fondo.png);
-    height: auto;
-    background-position: center;
-    background-size: cover;
-
-    ;
-}
-
 .img-carousel {
     max-height: 420px;
     object-fit: contain;
 }
-.carousel-indicators [data-bs-target]{
+
+.carousel-indicators [data-bs-target] {
     background-color: #ff7f07;
 }
 
@@ -117,7 +116,7 @@ nav a {
     text-align: left;
     font-family: bangers;
     color: #ff7f07;
-    font-size: 1, 5rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     text-shadow: 2px 5px 5px #000000;
@@ -141,20 +140,18 @@ p {
     text-shadow: 2px 5px 5px #000000;
 }
 
-/*grid----------------------------------------------------------------------------------*/
-
 .contenedor-grid {
     display: grid;
-    /*dibujar la grilla*/
+    
     grid-template-areas:
         ". titulo-grid titulo-grid ."
         "img1 caract1 img2 caract2"
         "img3 caract3 img4 caract4"
         "img5 caract5 img6 caract6";
-    /*cantidad y el ancho de cada columna*/
+    
     grid-template-columns:
         "25% 25% 25% 25%";
-    /*cantidad y el alta de cada fila*/
+    
     grid-template-rows:
         "100px 100px 100px 100px";
 
@@ -250,7 +247,7 @@ p {
 
 
 
-/*MAIN sucursales-----------------------------------------------------------------------------------*/
+/*MAIN sucursales------------------------------------------------------------------*/
 .presentacion-sucursales {
     background-image: url(../img/fondo.png);
     height: auto;
@@ -272,7 +269,7 @@ p {
 
 
 
-/*MAIN contacto-------------------------------------------------------------------------------------*/
+/*MAIN contacto-------------------------------------------------------------------------------------
 .presentacion-contacto {
     background-image: url(../img/fondo.png);
     height: auto;
@@ -282,7 +279,7 @@ p {
 
 .formulario {
     color: #ffffff;
-}
+}*/
 
 
 
@@ -322,7 +319,7 @@ footer {
 
 
 
-/*Media queries-------------------------------------------------------------------------*/
+/*Media queries---------------------------------*/
 @media (max-width: 480px) {
 
     header {
@@ -355,7 +352,7 @@ footer {
             "caract5"
             "img6"
             "caract6";
-        
+
         grid-template-columns: 90%;
         justify-content: center;
         justify-content: center;

@@ -1,0 +1,63 @@
+@use "./variables" as*;
+
+header {
+    @include flex(row, space-between, flex-star);
+    position: sticky;
+    top: 0%;
+    background-color: $gris;
+    z-index: 100;
+
+    .logo {
+        width: 95px;
+        margin: 8px;
+
+    }
+
+    nav {
+        width: 35%;
+
+        .lista-nav {
+            @include flex (row, space-between, center);
+            @include font (bangers, 1.1rem, 400, normal);
+            height: 100%;
+            margin-right: 10px;
+            list-style: none;
+            text-shadow: 2px 5px 5px $negro;
+
+            li {
+                a {
+                    color: $naranja;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+    }
+
+}
+
+footer {
+    background-color: $gris;
+
+    .redes {
+        color: $naranja;
+        @include text(center, 2px 5px 5px $negro);
+        @include font (bangers, 2rem, 400, normal);
+    }
+
+    .wsap {
+        width: 50px;
+        position: fixed;
+        bottom: 60px;
+        right: 60px;
+    }
+
+    .insta {
+        width: 40px;
+    }
+
+    .face {
+        width: 50px;
+    }
+}

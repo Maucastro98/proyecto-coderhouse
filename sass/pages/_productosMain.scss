@@ -1,0 +1,77 @@
+@use "../partials/variables" as*;
+
+.presentacion-productos {
+    @include presentacion (url(../img/fondo.png), auto, center, cover);
+    @include flex (row, center, center);
+
+    .contenedor-grid {
+        display: grid;
+        /*dibujar la grilla*/
+        grid-template-areas:
+            ". titulo-grid titulo-grid ."
+            "img1 caract1 img2 caract2"
+            "img3 caract3 img4 caract4"
+            "img5 caract5 img6 caract6";
+        /*cantidad y el ancho de cada columna*/
+        grid-template-columns:
+            "25% 25% 25% 25%";
+        /*cantidad y el alta de cada fila*/
+        grid-template-rows:
+            "100px 100px 100px 100px";
+
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        column-gap: 5px;
+        row-gap: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+
+        .titulo-grid {
+            grid-area: titulo-grid;
+            color: $naranja;
+            @include font (bangers, 3.5rem, 400, normal);
+            @include text (center, 2px 5px 5px $negro);
+
+        }
+
+        @for $i from 1 through 6 {
+            .img#{$i} {
+                grid-area: img#{$i};
+            }
+
+            .caract#{$i} {
+                grid-area: caract#{$i};
+            }
+        }
+    }
+
+    .sub-titulos {
+        color: $naranja;
+        @include text (left, 2px 5px 5px $negro);
+        @include font (bangers, 1.5rem, 400, normal);
+    }
+
+    h2 {
+        color: $naranja;
+        @include text (justify, 2px 5px 5px $negro);
+        font-family: DM Serif Display;
+        font-size: 0.95rem;
+        list-style: none;
+    }
+
+    p {
+        color: $blanco;
+        @include text (left, 2px 5px 5px $negro);
+        font-family: DM Serif Display;
+        font-size: 0.80rem;
+    }
+}

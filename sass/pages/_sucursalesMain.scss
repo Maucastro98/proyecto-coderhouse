@@ -1,0 +1,19 @@
+@use "../partials/variables" as*;
+
+main {
+    .presentacion-sucursales {
+        @include presentacion (url(../img/fondo.png), auto, center, cover);
+
+        .titulo {
+            color: $naranja;
+            @include font(bangers, 3.5rem, 400, normal);
+            @include text (center, 2px 5px 5px $negro);
+        }
+
+        .bajada-sucursales {
+            color: $blanco;
+            @include font(Bebas neue, 2rem, 400, normal);
+            @include text(left, 2px 5px 5px $negro);
+        }
+    }
+}
