@@ -1,15 +1,15 @@
 @use "./variables" as*;
 
 header {
-    @include flex(row, space-between, flex-star);
+    @include flex(row, space-between, center);
     position: sticky;
     top: 0%;
-    background-color: $gris;
+    background-color: $verde;
     z-index: 100;
 
     .logo {
-        width: 95px;
-        margin: 8px;
+        width: 200px;
+        margin: 2px;
 
     }
 
@@ -25,8 +25,10 @@ header {
             text-shadow: 2px 5px 5px $negro;
 
             li {
+
+
                 a {
-                    color: $naranja;
+                    color: $blanco;
                     text-decoration: none;
                     font-size: 1.2rem;
                 }
@@ -38,12 +40,13 @@ header {
 }
 
 footer {
-    background-color: $gris;
+    background-color: $verde;
 
     .redes {
-        color: $naranja;
+        color: $blanco;
         @include text(center, 2px 5px 5px $negro);
-        @include font (bangers, 2rem, 400, normal);
+        @include font (bangers, 1.5rem, 400, normal);
+
     }
 
     .wsap {
@@ -59,5 +62,13 @@ footer {
 
     .face {
         width: 50px;
+    }
+
+    .logo {
+        width: 150px;
+        margin: 2px;
+        
+
+
     }
 }

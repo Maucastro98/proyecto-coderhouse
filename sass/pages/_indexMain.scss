@@ -2,10 +2,10 @@
 
 main {
     .presentacion-inicio {
-        @include presentacion (url(../img/fondo.png), auto, center, cover);
+        @include presentacion ($negro, auto, center, cover);
 
         .titulo {
-            color: $naranja;
+            color: $verde;
             @include text (center, 2px 5px 5px $negro);
             @include font(bangers, 3.5rem, 400, normal);
         }
@@ -18,7 +18,7 @@ main {
 
         section {
             .carousel-indicators [data-bs-target] {
-                background-color: $naranja
+                background-color: $verde
             }
 
             .img-carousel {

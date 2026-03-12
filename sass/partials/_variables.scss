@@ -1,5 +1,5 @@
 //colores
-$naranja: #ff7f07;
+$verde: #277e36;
 $negro: #000000;
 $blanco: #ffffff;
 $gris: #535353;
@@ -22,8 +22,8 @@ $font-texto: 'DM Serif Display';
     font-weight: $weight;
     font-style: $style;
 }
-@mixin presentacion ($image, $height, $position, $size) {
-    background-image: $image;
+@mixin presentacion ($color, $height, $position, $size) {
+    background-color: $color;
     height: $height;
     background-position: $position;
     background-size: $size
@@ -32,3 +32,5 @@ $font-texto: 'DM Serif Display';
     text-align: $align;
     text-shadow: $shadow;
 }
+
+
